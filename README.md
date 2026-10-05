@@ -27,7 +27,7 @@ MATRIX: every surface gets a final status. No row left without one.
 
 ## Repository Structure
 
-- `METHODOLOGY.md` — the full methodology
+- `PLAYBOOK.md` — the bug hunter's field manual
 - `recon/` — lightweight recon toolkit (subdomain enum, JS endpoint discovery, header/probe checks)
 - `phases/` — phased hunting prompts (00–10) for systematic coverage
 
