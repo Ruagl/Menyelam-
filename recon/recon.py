@@ -1,1 +1,59 @@
-IyEvdXNyL2Jpbi9lbnYgcHl0aG9uMwoiIiIKTUVOWUVMQU0gcmVjb24gdG9vbGtpdCDigJQgcGFzc2l2ZSBzdWJkb21haW4gZW51bWVyYXRpb24gKyBiYXNpYyB3ZWIgcHJvYmluZy4KVXNhZ2U6IHB5dGhvbjMgcmVjb24ucHkgPGRvbWFpbj4KUmF0ZTogcG9saXRlIGJ5IGRlZmF1bHQuIE9ubHkgdXNlIGFnYWluc3QgaW4tc2NvcGUgdGFyZ2V0cyB5b3UgYXJlIGF1dGhvcml6ZWQgdG8gdGVzdC4KIiIiCmltcG9ydCBzeXMsIHNvY2tldCwganNvbiwgdXJsbGliLnJlcXVlc3QsIHNzbAoKZGVmIHBhc3NpdmVfc3ViZG9tYWlucyhkb21haW4pOgogICAgIiIiY3J0LnNoIHBhc3NpdmUgZW51bWVyYXRpb24uIiIiCiAgICBzdWJzID0gc2V0KCkKICAgIHVybCA9IGYiaHR0cHM6Ly9jcnQuc2gvP3E9JTI1Lntkb21haW59Jm91dHB1dD1qc29uIgogICAgdHJ5OgogICAgICAgIHJlcSA9IHVybGxpYi5yZXF1ZXN0LlJlcXVlc3QodXJsLCBoZWFkZXJzPXsiVXNlci1BZ2VudCI6ICJtZW55ZWxhbS1yZWNvbiJ9KQogICAgICAgIGRhdGEgPSBqc29uLmxvYWRzKHVybGxpYi5yZXF1ZXN0LnVybG9wZW4ocmVxLCB0aW1lb3V0PTIwKS5yZWFkKCkpCiAgICAgICAgZm9yIGUgaW4gZGF0YToKICAgICAgICAgICAgZm9yIG4gaW4gZVsibmFtZV92YWx1ZSJdLnNwbGl0KCJcbiIpOgogICAgICAgICAgICAgICAgbiA9IG4uc3RyaXAoKS5sb3dlcigpCiAgICAgICAgICAgICAgICBpZiBuIGFuZCAiKiIgbm90IGluIG4gYW5kIG4uZW5kc3dpdGgoZG9tYWluKToKICAgICAgICAgICAgICAgICAgICBzdWJzLmFkZChuKQogICAgZXhjZXB0IEV4Y2VwdGlvbiBhcyBleDoKICAgICAgICBwcmludChmIlshXSBjcnQuc2ggZmFpbGVkOiB7ZXh9IiwgZmlsZT1zeXMuc3RkZXJyKQogICAgcmV0dXJuIHNvcnRlZChzdWJzKQoKZGVmIHByb2JlKGhvc3QpOgogICAgIiIiQmFzaWMgSFRUUFMgcHJvYmU6IHN0YXR1cywgc2VydmVyIGhlYWRlciwgdGl0bGUuIiIiCiAgICBvdXQgPSB7Imhvc3QiOiBob3N0LCAic3RhdHVzIjogTm9uZSwgInNlcnZlciI6IE5vbmUsICJ0aXRsZSI6IE5vbmV9CiAgICB0cnk6CiAgICAgICAgY3R4ID0gc3NsLmNyZWF0ZV9kZWZhdWx0X2NvbnRleHQoKQogICAgICAgIHJlcSA9IHVybGxpYi5yZXF1ZXN0LlJlcXVlc3QoZiJodHRwczovL3tob3N0fSIsIGhlYWRlcnM9eyJVc2VyLUFnZW50IjogIm1lbnllbGFtLXJlY29uIn0pCiAgICAgICAgciA9IHVybGxpYi5yZXF1ZXN0LnVybG9wZW4ocmVxLCB0aW1lb3V0PTEwLCBjb250ZXh0PWN0eCkKICAgICAgICBvdXRbInN0YXR1cyJdID0gci5zdGF0dXMKICAgICAgICBvdXRbInNlcnZlciJdID0gci5oZWFkZXJzLmdldCgiU2VydmVyIikKICAgICAgICBodG1sID0gci5yZWFkKDUwMDAwKS5kZWNvZGUoInV0Zi04IiwgImlnbm9yZSIpCiAgICAgICAgaWYgIjx0aXRsZT4iIGluIGh0bWwubG93ZXIoKToKICAgICAgICAgICAgdCA9IGh0bWwubG93ZXIoKS5zcGxpdCgiPHRpdGxlPiIsIDEpWzFdLnNwbGl0KCI8L3RpdGxlPiIsIDEpWzBdCiAgICAgICAgICAgIG91dFsidGl0bGUiXSA9IHQuc3RyaXAoKVs6ODBdCiAgICBleGNlcHQgRXhjZXB0aW9uIGFzIGV4OgogICAgICAgIG91dFsic3RhdHVzIl0gPSBmIkVSUiB7dHlwZShleCkuX19uYW1lX199IgogICAgcmV0dXJuIG91dAoKZGVmIG1haW4oKToKICAgIGlmIGxlbihzeXMuYXJndikgPCAyOgogICAgICAgIHByaW50KCJVc2FnZTogcHl0aG9uMyByZWNvbi5weSA8ZG9tYWluPiIpOyBzeXMuZXhpdCgxKQogICAgZG9tYWluID0gc3lzLmFyZ3ZbMV0ubG93ZXIoKQogICAgcHJpbnQoZiJbKl0gRW51bWVyYXRpbmcgc3ViZG9tYWlucyBmb3Ige2RvbWFpbn0gLi4uIikKICAgIHN1YnMgPSBwYXNzaXZlX3N1YmRvbWFpbnMoZG9tYWluKQogICAgcHJpbnQoZiJbKl0gRm91bmQge2xlbihzdWJzKX0gc3ViZG9tYWlucyIpCiAgICByZXN1bHRzID0gW10KICAgIGZvciBzIGluIHN1YnNbOjUwXToKICAgICAgICByID0gcHJvYmUocykKICAgICAgICByZXN1bHRzLmFwcGVuZChyKQogICAgICAgIHByaW50KGYiICB7clsnc3RhdHVzJ119ICB7clsnaG9zdCddfSAgW3tyWydzZXJ2ZXInXSBvciAnLSd9XSAge3JbJ3RpdGxlJ10gb3IgJyd9IikKICAgIHdpdGggb3BlbihmInJlY29uX3tkb21haW59Lmpzb24iLCAidyIpIGFzIGY6CiAgICAgICAganNvbi5kdW1wKHJlc3VsdHMsIGYsIGluZGVudD0yKQogICAgcHJpbnQoZiJbKl0gU2F2ZWQgcmVjb25fe2RvbWFpbn0uanNvbiIpCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgbWFpbigpCg==
+#!/usr/bin/env python3
+"""
+MENYELAM recon toolkit — passive subdomain enumeration + basic web probing.
+Usage: python3 recon.py <domain>
+Rate: polite by default. Only use against in-scope targets you are authorized to test.
+"""
+import sys, socket, json, urllib.request, ssl
+
+def passive_subdomains(domain):
+    """crt.sh passive enumeration."""
+    subs = set()
+    url = f"https://crt.sh/?q=%25.{domain}&output=json"
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "menyelam-recon"})
+        data = json.loads(urllib.request.urlopen(req, timeout=20).read())
+        for e in data:
+            for n in e["name_value"].split("\n"):
+                n = n.strip().lower()
+                if n and "*" not in n and n.endswith(domain):
+                    subs.add(n)
+    except Exception as ex:
+        print(f"[!] crt.sh failed: {ex}", file=sys.stderr)
+    return sorted(subs)
+
+def probe(host):
+    """Basic HTTPS probe: status, server header, title."""
+    out = {"host": host, "status": None, "server": None, "title": None}
+    try:
+        ctx = ssl.create_default_context()
+        req = urllib.request.Request(f"https://{host}", headers={"User-Agent": "menyelam-recon"})
+        r = urllib.request.urlopen(req, timeout=10, context=ctx)
+        out["status"] = r.status
+        out["server"] = r.headers.get("Server")
+        html = r.read(50000).decode("utf-8", "ignore")
+        if "<title>" in html.lower():
+            t = html.lower().split("<title>", 1)[1].split("</title>", 1)[0]
+            out["title"] = t.strip()[:80]
+    except Exception as ex:
+        out["status"] = f"ERR {type(ex).__name__}"
+    return out
+
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: python3 recon.py <domain>"); sys.exit(1)
+    domain = sys.argv[1].lower()
+    print(f"[*] Enumerating subdomains for {domain} ...")
+    subs = passive_subdomains(domain)
+    print(f"[*] Found {len(subs)} subdomains")
+    results = []
+    for s in subs[:50]:
+        r = probe(s)
+        results.append(r)
+        print(f"  {r['status']}  {r['host']}  [{r['server'] or '-'}]  {r['title'] or ''}")
+    with open(f"recon_{domain}.json", "w") as f:
+        json.dump(results, f, indent=2)
+    print(f"[*] Saved recon_{domain}.json")
+
+if __name__ == "__main__":
+    main()
