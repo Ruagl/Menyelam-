@@ -1,1 +1,46 @@
-IyEvdXNyL2Jpbi9lbnYgcHl0aG9uMwoiIiIKTUVOWUVMQU0gcmVjb24gdG9vbGtpdCDigJQgSlMgYnVuZGxlIGVuZHBvaW50IGRpc2NvdmVyeS4KVXNhZ2U6IHB5dGhvbjMganNkaXNjb3Zlci5weSA8dXJsPgpFeHRyYWN0cyBBUEkgZW5kcG9pbnRzLCBwYXRocyBhbmQgaW50ZXJlc3Rpbmcgc3RyaW5ncyBmcm9tIEpTIGZpbGVzLgoiIiIKaW1wb3J0IHN5cywgcmUsIHVybGxpYi5yZXF1ZXN0LCBzc2wKCkVORFBPSU5UX1JFID0gcmUuY29tcGlsZShyJ1siXCdgXSgvKD86YXBpfHZcZHxncmFwaHFsKVteIlwnYFxzXSopWyJcJ2BdJywgcmUuSSkKUEFUSF9SRSA9IHJlLmNvbXBpbGUocidbIlwnYF0oL1thLXpBLVowLTlfXC0vXXszLDgwfSlbIlwnYF0nKQpTRUNSRVRfUkUgPSByZS5jb21waWxlKHInKGFwaVtfLV0/a2V5fHNlY3JldHx0b2tlbnxwYXNzd29yZClccypbOj1dXHMqWyJcJ11bXiJcJ117NCx9WyJcJ10nLCByZS5JKQoKZGVmIGZldGNoKHVybCk6CiAgICBjdHggPSBzc2wuY3JlYXRlX2RlZmF1bHRfY29udGV4dCgpCiAgICByZXEgPSB1cmxsaWIucmVxdWVzdC5SZXF1ZXN0KHVybCwgaGVhZGVycz17IlVzZXItQWdlbnQiOiAibWVueWVsYW0tcmVjb24ifSkKICAgIHJldHVybiB1cmxsaWIucmVxdWVzdC51cmxvcGVuKHJlcSwgdGltZW91dD0xNSwgY29udGV4dD1jdHgpLnJlYWQoKS5kZWNvZGUoInV0Zi04IiwgImlnbm9yZSIpCgpkZWYgbWFpbigpOgogICAgaWYgbGVuKHN5cy5hcmd2KSA8IDI6CiAgICAgICAgcHJpbnQoIlVzYWdlOiBweXRob24zIGpzZGlzY292ZXIucHkgPHVybD4iKTsgc3lzLmV4aXQoMSkKICAgIHVybCA9IHN5cy5hcmd2WzFdCiAgICBwcmludChmIlsqXSBGZXRjaGluZyB7dXJsfSIpCiAgICBodG1sID0gZmV0Y2godXJsKQogICAganNfdXJscyA9IHNldChyZS5maW5kYWxsKHInKD86c3JjPSJ8aHJlZj0iKShbXiJdK1wuanNbXiJdKikiJywgaHRtbCkpCiAgICBwcmludChmIlsqXSBGb3VuZCB7bGVuKGpzX3VybHMpfSBKUyBmaWxlcyIpCiAgICBlbmRwb2ludHMsIHBhdGhzID0gc2V0KCksIHNldCgpCiAgICBmb3IgaiBpbiBqc191cmxzOgogICAgICAgIGlmIGouc3RhcnRzd2l0aCgiLyIpOgogICAgICAgICAgICBqID0gdXJsLnJzdHJpcCgiLyIpICsgagogICAgICAgIGVsaWYgbm90IGouc3RhcnRzd2l0aCgiaHR0cCIpOgogICAgICAgICAgICBjb250aW51ZQogICAgICAgIHRyeToKICAgICAgICAgICAganMgPSBmZXRjaChqKQogICAgICAgICAgICBlbmRwb2ludHMudXBkYXRlKEVORFBPSU5UX1JFLmZpbmRhbGwoanMpKQogICAgICAgICAgICBwYXRocy51cGRhdGUocCBmb3IgcCBpbiBQQVRIX1JFLmZpbmRhbGwoanMpIGlmICIuIiBub3QgaW4gcC5zcGxpdCgiLyIpWy0xXSkKICAgICAgICAgICAgZm9yIG0gaW4gU0VDUkVUX1JFLmZpbmRhbGwoanMpOgogICAgICAgICAgICAgICAgcHJpbnQoZiIgIFshXSBwb3NzaWJsZSBzZWNyZXQgcGF0dGVybiBpbiB7an06IHttWzo0MF19IikKICAgICAgICBleGNlcHQgRXhjZXB0aW9uIGFzIGV4OgogICAgICAgICAgICBwcmludChmIiAgWyFdIHNraXAge2p9OiB7ZXh9IikKICAgIHByaW50KCJcbj09PSBBUEkgZW5kcG9pbnRzID09PSIpCiAgICBmb3IgZSBpbiBzb3J0ZWQoZW5kcG9pbnRzKVs6NTBdOiBwcmludCgiICIsIGUpCiAgICBwcmludCgiXG49PT0gUGF0aHMgPT09IikKICAgIGZvciBwIGluIHNvcnRlZChwYXRocylbOjUwXTogcHJpbnQoIiAiLCBwKQoKaWYgX19uYW1lX18gPT0gIl9fbWFpbl9fIjoKICAgIG1haW4oKQo=
+#!/usr/bin/env python3
+"""
+MENYELAM recon toolkit — JS bundle endpoint discovery.
+Usage: python3 jsdiscover.py <url>
+Extracts API endpoints, paths and interesting strings from JS files.
+"""
+import sys, re, urllib.request, ssl
+
+ENDPOINT_RE = re.compile(r'["\'`](/(?:api|v\d|graphql)[^"\'`\s]*)["\'`]', re.I)
+PATH_RE = re.compile(r'["\'`](/[a-zA-Z0-9_\-/]{3,80})["\'`]')
+SECRET_RE = re.compile(r'(api[_-]?key|secret|token|password)\s*[:=]\s*["\'][^"\']{4,}["\']', re.I)
+
+def fetch(url):
+    ctx = ssl.create_default_context()
+    req = urllib.request.Request(url, headers={"User-Agent": "menyelam-recon"})
+    return urllib.request.urlopen(req, timeout=15, context=ctx).read().decode("utf-8", "ignore")
+
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: python3 jsdiscover.py <url>"); sys.exit(1)
+    url = sys.argv[1]
+    print(f"[*] Fetching {url}")
+    html = fetch(url)
+    js_urls = set(re.findall(r'(?:src="|href=")([^"]+\.js[^"]*)"', html))
+    print(f"[*] Found {len(js_urls)} JS files")
+    endpoints, paths = set(), set()
+    for j in js_urls:
+        if j.startswith("/"):
+            j = url.rstrip("/") + j
+        elif not j.startswith("http"):
+            continue
+        try:
+            js = fetch(j)
+            endpoints.update(ENDPOINT_RE.findall(js))
+            paths.update(p for p in PATH_RE.findall(js) if "." not in p.split("/")[-1])
+            for m in SECRET_RE.findall(js):
+                print(f"  [!] possible secret pattern in {j}: {m[:40]}")
+        except Exception as ex:
+            print(f"  [!] skip {j}: {ex}")
+    print("\n=== API endpoints ===")
+    for e in sorted(endpoints)[:50]: print(" ", e)
+    print("\n=== Paths ===")
+    for p in sorted(paths)[:50]: print(" ", p)
+
+if __name__ == "__main__":
+    main()
