@@ -1,1 +1,35 @@
-IyEvdXNyL2Jpbi9lbnYgcHl0aG9uMwoiIiIKTUVOWUVMQU0gcmVjb24gdG9vbGtpdCDigJQgc2VjdXJpdHkgaGVhZGVyICsgQ09SUyBtaXNjb25maWd1cmF0aW9uIHF1aWNrIGNoZWNrLgpVc2FnZTogcHl0aG9uMyBoZWFkZXJzLnB5IDx1cmw+IFtldmlsLW9yaWdpbl0KIiIiCmltcG9ydCBzeXMsIHVybGxpYi5yZXF1ZXN0LCBzc2wKCmRlZiBjaGVjayh1cmwsIGV2aWw9Imh0dHBzOi8vZXZpbC5leGFtcGxlLmNvbSIpOgogICAgY3R4ID0gc3NsLmNyZWF0ZV9kZWZhdWx0X2NvbnRleHQoKQogICAgb3V0ID0ge30KICAgIGZvciBvcmlnaW4gaW4gKE5vbmUsIGV2aWwpOgogICAgICAgIGggPSB7IlVzZXItQWdlbnQiOiAibWVueWVsYW0tcmVjb24ifQogICAgICAgIGlmIG9yaWdpbjogaFsiT3JpZ2luIl0gPSBvcmlnaW4KICAgICAgICB0cnk6CiAgICAgICAgICAgIHIgPSB1cmxsaWIucmVxdWVzdC51cmxvcGVuKHVybGxpYi5yZXF1ZXN0LlJlcXVlc3QodXJsLCBoZWFkZXJzPWgpLCB0aW1lb3V0PTEwLCBjb250ZXh0PWN0eCkKICAgICAgICAgICAgb3V0W29yaWdpbiBvciAibm8tb3JpZ2luIl0gPSB7CiAgICAgICAgICAgICAgICAic3RhdHVzIjogci5zdGF0dXMsCiAgICAgICAgICAgICAgICAiYWNhbyI6IHIuaGVhZGVycy5nZXQoIkFjY2Vzcy1Db250cm9sLUFsbG93LU9yaWdpbiIpLAogICAgICAgICAgICAgICAgImFjYWMiOiByLmhlYWRlcnMuZ2V0KCJBY2Nlc3MtQ29udHJvbC1BbGxvdy1DcmVkZW50aWFscyIpLAogICAgICAgICAgICAgICAgImNzcCI6IChyLmhlYWRlcnMuZ2V0KCJDb250ZW50LVNlY3VyaXR5LVBvbGljeSIpIG9yICIiKVs6ODBdLAogICAgICAgICAgICAgICAgInhmbyI6IHIuaGVhZGVycy5nZXQoIlgtRnJhbWUtT3B0aW9ucyIpLAogICAgICAgICAgICAgICAgImhzdHMiOiByLmhlYWRlcnMuZ2V0KCJTdHJpY3QtVHJhbnNwb3J0LVNlY3VyaXR5IiksCiAgICAgICAgICAgIH0KICAgICAgICBleGNlcHQgRXhjZXB0aW9uIGFzIGV4OgogICAgICAgICAgICBvdXRbb3JpZ2luIG9yICJuby1vcmlnaW4iXSA9IHsiZXJyb3IiOiBzdHIoZXgpWzo2MF19CiAgICByZXR1cm4gb3V0CgpkZWYgbWFpbigpOgogICAgaWYgbGVuKHN5cy5hcmd2KSA8IDI6CiAgICAgICAgcHJpbnQoIlVzYWdlOiBweXRob24zIGhlYWRlcnMucHkgPHVybD4iKTsgc3lzLmV4aXQoMSkKICAgIGltcG9ydCBqc29uCiAgICBwcmludChqc29uLmR1bXBzKGNoZWNrKHN5cy5hcmd2WzFdKSwgaW5kZW50PTIpKQoKaWYgX19uYW1lX18gPT0gIl9fbWFpbl9fIjoKICAgIG1haW4oKQo=
+#!/usr/bin/env python3
+"""
+MENYELAM recon toolkit — security header + CORS misconfiguration quick check.
+Usage: python3 headers.py <url> [evil-origin]
+"""
+import sys, urllib.request, ssl
+
+def check(url, evil="https://evil.example.com"):
+    ctx = ssl.create_default_context()
+    out = {}
+    for origin in (None, evil):
+        h = {"User-Agent": "menyelam-recon"}
+        if origin: h["Origin"] = origin
+        try:
+            r = urllib.request.urlopen(urllib.request.Request(url, headers=h), timeout=10, context=ctx)
+            out[origin or "no-origin"] = {
+                "status": r.status,
+                "acao": r.headers.get("Access-Control-Allow-Origin"),
+                "acac": r.headers.get("Access-Control-Allow-Credentials"),
+                "csp": (r.headers.get("Content-Security-Policy") or "")[:80],
+                "xfo": r.headers.get("X-Frame-Options"),
+                "hsts": r.headers.get("Strict-Transport-Security"),
+            }
+        except Exception as ex:
+            out[origin or "no-origin"] = {"error": str(ex)[:60]}
+    return out
+
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: python3 headers.py <url>"); sys.exit(1)
+    import json
+    print(json.dumps(check(sys.argv[1]), indent=2))
+
+if __name__ == "__main__":
+    main()
